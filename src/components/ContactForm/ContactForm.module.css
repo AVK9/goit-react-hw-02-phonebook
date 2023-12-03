@@ -1,0 +1,15 @@
+.formBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.formLabel {
+  display: flex;
+  flex-direction: column;
+}
+.btnAddContact {
+  margin-top: 20px;
+  width: 100px;
+  height: 25px;
+  background-color: rgb(255, 255, 255);
+}
