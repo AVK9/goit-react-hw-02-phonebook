@@ -1,18 +1,17 @@
 import css from './ContactList.module.css'
 import {ContactListItem} from '../ContactListItem/ContactListItem'
-import { nanoid } from 'nanoid'
 
-export const ContactList = ({ contacts }) => (
-    <div className={css.contactsBox}>
+export const ContactList = ({ contacts, deleteName }) => (
         <ul className={css.contactsList}>
-        {contacts.map(({name, number}) => (
+        {contacts.map(({name, number, id}) => (
                 <ContactListItem
                     name={name}
                     number={number}
-                    key={nanoid()}
+                    key={id}
+                    id={id}
+                    deleteName={deleteName}
                 />
                 ))
         }
         </ul>
-    </div>
 )
