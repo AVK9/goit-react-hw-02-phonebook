@@ -4,7 +4,7 @@ import css from './ContactListItem.module.css'
 export const ContactListItem = ({ name, number, id, deleteName }) => {
     const handleDel = () => {
         deleteName(id);
-        // console.log(id);
+        console.log(id);
     };
     
     
