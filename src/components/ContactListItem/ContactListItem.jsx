@@ -10,11 +10,16 @@ export const ContactListItem = ({ name, number, id, deleteContact }) => {
     
     return (
         <li className={css.contactItem}>
-            {name}......{number}
+            <span>{name}</span>
+            <span>{number}</span>
+            
             <button
                 className={css.buttonDel}
                 onClick={handleDel}
-            >x</button>
+            ><i className={css.icon} class="icon ion-md-trash"></i>
+            Delete
+            </button>
         </li>
     )
 }
+

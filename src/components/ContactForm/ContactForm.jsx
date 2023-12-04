@@ -37,6 +37,7 @@ render(){
                     value={this.state.name}
                     onChange={this.handleChange}
                     // pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$" 
+                    placeholder="Ivan Bereza"
                     required />
                 </label>
                 <label htmlFor="Number" className={css.formLabel}>
@@ -46,15 +47,18 @@ render(){
                     value={this.state.number}
                     onChange={this.handleChange}
                     pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
-                    required />
+                    required
+                     placeholder="524-24-70"    />
                 </label>
-            </div>
 
-            <button type='submit' className={css.btnAddContact}>
-                Add contact
-             </button>
+                    <button type='submit' className={css.btnAddContact}>
+                        <i className={css.icon}  class="icon ion-md-person-add"></i> 
+
+                     Add contact
+                    </button>
+                </div>
+                <ion-icon name="search"></ion-icon>
         </form>
-
     </div>
     )
     }
