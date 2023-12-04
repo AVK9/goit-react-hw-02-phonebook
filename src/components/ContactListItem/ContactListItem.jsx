@@ -1,10 +1,10 @@
-import React from 'react';
+// import React from 'react';
 import css from './ContactListItem.module.css'
 
-export const ContactListItem = ({ name, number, id, deleteName }) => {
+export const ContactListItem = ({ name, number, id, deleteContact }) => {
     const handleDel = () => {
-        deleteName(id);
-        console.log(id);
+        deleteContact(id);
+        // console.log(id);
     };
     
     

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import css from './ContactForm.module.css'
 
-
-
-
 export class ContactForm extends Component {
 state = {
   name: '',
@@ -13,7 +10,7 @@ state = {
 handleChange = e => {
     const { name, value } = e.currentTarget;
     this.setState({ [name]: value });
-    console.log('e :>> ', value);
+    // console.log('e :>> ', value);
 };
     handleSubmit = e => {
         e.preventDefault();
@@ -27,8 +24,7 @@ handleChange = e => {
             number: ''
     })
     };
-    
-    
+
 render(){
     return (
 <div>
@@ -40,6 +36,7 @@ render(){
                     name="name"
                     value={this.state.name}
                     onChange={this.handleChange}
+                    // pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$" 
                     required />
                 </label>
                 <label htmlFor="Number" className={css.formLabel}>
@@ -48,6 +45,7 @@ render(){
                     name="number"
                     value={this.state.number}
                     onChange={this.handleChange}
+                    pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
                     required />
                 </label>
             </div>
