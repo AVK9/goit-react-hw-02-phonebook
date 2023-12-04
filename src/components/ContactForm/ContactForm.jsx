@@ -37,7 +37,7 @@ render(){
                     value={this.state.name}
                     onChange={this.handleChange}
                     // pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$" 
-                    placeholder="Ivan Bereza"
+                    // placeholder="Ivan Bereza"
                     required />
                 </label>
                 <label htmlFor="Number" className={css.formLabel}>
@@ -48,7 +48,8 @@ render(){
                     onChange={this.handleChange}
                     pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
                     required
-                     placeholder="524-24-70"    />
+                            // placeholder="524-24-70"
+                        />
                 </label>
 
                     <button type='submit' className={css.btnAddContact}>
